@@ -8,8 +8,8 @@ const Homepage = () => {
   let [page, setpage] = useState(1);
   let [currentSearch, setCurrentSearch] = useState("");
   const auth = "ROzeG4NecoJyPUvl4W0RikMAIzktNxpALrSiv7vM34aROSNYa96qDiLn";
-  const initialURL = "https://api.pexels.com/v1/curated?page=1&per_page=15";
-  const searchURL = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=15&page=1`;
+  const initialURL = "https://api.pexels.com/v1/curated?page=1&per_page=16";
+  const searchURL = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=16&page=1`;
 
   //fetch data from pexels api
   const search = async (url) => {
@@ -30,9 +30,9 @@ const Homepage = () => {
     let newURL;
 
     if (currentSearch === "") {
-      newURL = `https://api.pexels.com/v1/curated?page=${page}&per_page=15`;
+      newURL = `https://api.pexels.com/v1/curated?page=${page}&per_page=16`;
     } else {
-      newURL = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=15&page=${page}`;
+      newURL = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=16&page=${page}`;
     }
     setpage(page + 1);
     const dataFetch = await fetch(newURL, {
